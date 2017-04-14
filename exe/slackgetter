@@ -2,13 +2,4 @@
 
 require "slackgetter"
 
-# Slackgetter.configure_token ENV['SLACK_TOKEN']
-#
-# channel_name = ARGV[0]
-# oldest = ARGV[1] || (Time.now - 24*60*60).to_s
-# latest = ARGV[2] || Time.now.to_s
-#
-# messages = Slackgetter.messages(channel_name, oldest, latest)
-# puts messages
-
 Slackgetter::CLI.start
