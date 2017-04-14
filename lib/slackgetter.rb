@@ -1,6 +1,7 @@
 require "time"
 require "slack"
 require "slackgetter/version"
+require "slackgetter/cli"
 
 module Slackgetter
 
