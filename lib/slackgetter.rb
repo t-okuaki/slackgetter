@@ -16,9 +16,13 @@ module Slackgetter
     oldest = Time.parse(oldest)
     latest = Time.parse(latest)
 
-    messages = Slack.channels_history(channel: channel_id, oldest: oldest.to_i, latest: latest.to_i)
+    messages = Slack.channels_history(channel: channel_id, oldest: oldest.to_f, latest: latest.to_f)
     text = text(messages)
     puts text
+  end
+
+  def self.url_to_time(url)
+    Time.at url.gsub(/.+\/archives\/.+\/p(.+)/){$1}.insert(10, ".").to_f
   end
 
   def self.channel_id(channel_name)
