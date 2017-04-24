@@ -26,7 +26,7 @@ Or install it yourself as:
 
 Generate token with [legacy token generator](https://api.slack.com/custom-integrations/legacy-tokens).
 
-Edit `~/.bash_profile` (or `~/.zshrc` if you use zsh) to set `SLACK_TOKEN` environment variable:
+Edit `~/.bash_profile` (or `~/.zshrc` if you use Zsh) to set `SLACK_TOKEN` environment variable:
 
 ```
 export SLACK_TOKEN=<generated-token>
@@ -40,7 +40,7 @@ Getting messages in `general` channel from just one day ago to now:
 $ slackgetter time general
 ```
 
-Getting messages in `general` channel from `2017-04-01 12:00:30` to now:
+Getting messages in `general` channel from `2017-04-01 12:34:56` to now:
 
 ```
 $ slackgetter time general `2017-04-01 12:34:56`
