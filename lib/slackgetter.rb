@@ -22,7 +22,7 @@ module Slackgetter
   end
 
   def self.url_to_time(url)
-    Time.at url.gsub(/.+\/archives\/.+\/p(.+)/){$1}.insert(10, ".").to_f
+    Time.at url.gsub(/.+\/p(.+)\z/){$1}.insert(10, ".").to_f
   end
 
   def self.channel_id(channel_name)
